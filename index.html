@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj digital</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="reloj">
+        <div class="horas">
+            <p id="horas"></p>
+            <p>Horas</p>
+        </div>
+        <div class="minutos">
+            <p id="minutos"></p>
+            <p>Minutos</p>
+        </div>
+        <div class="segundos">
+            <p id="segundos"></p>
+            <p>Segundos</p>
+        </div>
+    </div>
+
+    <script>
+        setInterval(function(){
+            const h = new Date();
+            const hora = document.getElementById("horas").innerHTML = h.getHours();
+            const m = new Date();
+            const minutos = document.getElementById("minutos").innerHTML = h.getMinutes();
+            const s = new Date();
+            const segundos = document.getElementById("segundos").innerHTML = h.getSeconds();
+        }, 100)        
+    </script>
+</body>
+</html>
